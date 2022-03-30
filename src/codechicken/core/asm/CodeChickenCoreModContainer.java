@@ -4,7 +4,6 @@ import java.io.File;
 import java.util.LinkedList;
 import java.util.List;
 
-import codechicken.core.CCUpdateChecker;
 import codechicken.core.ClientUtils;
 import codechicken.core.featurehack.LiquidTextures;
 import codechicken.core.internal.CCCEventHandler;
@@ -64,8 +63,6 @@ public class CodeChickenCoreModContainer extends DummyModContainer
     @Subscribe
     public void init(FMLInitializationEvent event) {
         if (event.getSide().isClient()) {
-            if (config.getTag("checkUpdates").getBooleanValue(true))
-                CCUpdateChecker.updateCheck(getModId());
 
             ClientUtils.enhanceSupportersList("CodeChickenCore");
 
