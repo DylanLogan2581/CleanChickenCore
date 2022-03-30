@@ -5,7 +5,6 @@ import java.util.LinkedList;
 import java.util.List;
 
 import codechicken.core.ClientUtils;
-import codechicken.core.featurehack.LiquidTextures;
 import codechicken.core.internal.CCCEventHandler;
 import codechicken.core.launch.CodeChickenCorePlugin;
 import codechicken.lib.config.ConfigFile;
@@ -56,8 +55,6 @@ public class CodeChickenCoreModContainer extends DummyModContainer
 
     @Subscribe
     public void preInit(FMLPreInitializationEvent event) {
-        if (event.getSide().isClient())
-            LiquidTextures.init();
     }
 
     @Subscribe

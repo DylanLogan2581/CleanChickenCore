@@ -96,7 +96,6 @@ public class CodeChickenCorePlugin implements IFMLLoadingPlugin, IFMLCallHook
         return new String[]{
                 "codechicken.lib.asm.ClassHeirachyManager",
                 "codechicken.core.asm.InterfaceDependancyTransformer",
-                "codechicken.core.asm.TweakTransformer",
                 "codechicken.core.asm.DelegatedTransformer",
                 "codechicken.core.asm.DefaultImplementationTransformer"};
     }
@@ -123,7 +122,6 @@ public class CodeChickenCorePlugin implements IFMLLoadingPlugin, IFMLCallHook
     @Override
     public Void call() {
         CodeChickenCoreModContainer.loadConfig();
-        TweakTransformer.load();
         scanCodeChickenMods();
 
         return null;
