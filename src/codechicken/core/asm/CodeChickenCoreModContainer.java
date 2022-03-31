@@ -7,7 +7,6 @@ import java.util.List;
 import codechicken.core.ClientUtils;
 import codechicken.core.internal.CCCEventHandler;
 import codechicken.core.launch.CodeChickenCorePlugin;
-import codechicken.lib.config.ConfigFile;
 
 import com.google.common.eventbus.EventBus;
 import com.google.common.eventbus.Subscribe;
@@ -22,13 +21,6 @@ import net.minecraftforge.common.MinecraftForge;
 
 public class CodeChickenCoreModContainer extends DummyModContainer
 {
-    public static ConfigFile config;
-
-    public static void loadConfig() {
-        if(config == null)
-            config = new ConfigFile(new File(CodeChickenCorePlugin.minecraftDir, "config/CodeChickenCore.cfg")).setComment("CodeChickenCore configuration file.");
-    }
-
     public CodeChickenCoreModContainer() {
         super(MetadataCollection.from(MetadataCollection.class.getResourceAsStream("/cccmod.info"), "CodeChickenCore").getMetadataForId("CodeChickenCore", null));
     }
